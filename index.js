@@ -17,7 +17,7 @@ app.post('/sumup', (req, res) => {
 app.get('/', (req, res) => {
   try {
     const response =  axios({
-      url: 'http://localhost:5000/sumup',
+      url: 'https://pure-harbor-98276.herokuapp.com/sumup',
       method: 'post',
       data: {
         address: {
