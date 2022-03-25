@@ -6,9 +6,12 @@ describe('SumUp Tests', function () {
     it('Sum array [1, 2, 3] ', function () {
       assert.equal( lib.sumArray([1, 2, 3]), 6)
     })
-    it(' Empty array sum', function () {
+    it('Empty array sum', function () {
         assert.equal( lib.sumArray([]), 0)
-      })
+    })
+    it(' No array sum', function () {
+      assert.equal( lib.sumArray('test'), 0)
+  })
   })
 
   describe('checksum', function () {

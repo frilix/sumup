@@ -10,7 +10,10 @@ app.use(express.json())
 
 app.post('/sumup', (req, res) => {
   const json = req.body
-  const  result = lib.checksum(lib.sumArray(json.address.values))
+  const result = 'address' in json && 'values' in json.address
+    ? lib.checksum(lib.sumArray(json.address.values))
+    : 'Invalid JSON'
+
   res.json({result: result});
 })
 

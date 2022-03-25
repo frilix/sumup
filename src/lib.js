@@ -1,6 +1,8 @@
 function sumArray(arr) {
-   // console.log(arr.reduce((value, acc) => parseInt(value) + acc, 0))
-    return arr.reduce((acc, value) => parseInt(value) + acc, 0);
+
+       return arr instanceof Array 
+            ? arr.reduce((acc, value) => parseInt(value) + acc, 0)
+            : 0;
 }
 
 function checksum(number) {    
